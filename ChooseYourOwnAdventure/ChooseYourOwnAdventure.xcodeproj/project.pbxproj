@@ -14,6 +14,7 @@
 		A5C53B22232031CB001B9BA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C53B20232031CB001B9BA9 /* Main.storyboard */; };
 		A5C53B24232031CC001B9BA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C53B23232031CC001B9BA9 /* Assets.xcassets */; };
 		A5C53B27232031CC001B9BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C53B25232031CC001B9BA9 /* LaunchScreen.storyboard */; };
+		A5C53B2F232048F2001B9BA9 /* SplashPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C53B2E232048F2001B9BA9 /* SplashPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A5C53B23232031CC001B9BA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5C53B26232031CC001B9BA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5C53B28232031CC001B9BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C53B2E232048F2001B9BA9 /* SplashPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				A5C53B1C232031CB001B9BA9 /* AppDelegate.swift */,
 				A5C53B1E232031CB001B9BA9 /* ViewController.swift */,
 				A5C53B20232031CB001B9BA9 /* Main.storyboard */,
+				A5C53B2E232048F2001B9BA9 /* SplashPageViewController.swift */,
 				A5C53B23232031CC001B9BA9 /* Assets.xcassets */,
 				A5C53B25232031CC001B9BA9 /* LaunchScreen.storyboard */,
 				A5C53B28232031CC001B9BA9 /* Info.plist */,
@@ -183,6 +186,7 @@
 			files = (
 				A5C53B1F232031CB001B9BA9 /* ViewController.swift in Sources */,
 				A5C53B1D232031CB001B9BA9 /* AppDelegate.swift in Sources */,
+				A5C53B2F232048F2001B9BA9 /* SplashPageViewController.swift in Sources */,
 				2588109623204400006239D5 /* ScenarioModel.swift in Sources */,
 				2588109823204F07006239D5 /* ScenarioController.swift in Sources */,
 			);
