@@ -73,7 +73,7 @@ like mace windu, morgan freeman(hes a jedi in the extended universe...i swear), 
         let response1of22 = Response(identifier: 31, text: "nice")
         let response2of22 = Response(identifier: 31, text: "thats cool but that jared guy seems sketchy")
         
-        scenario11.responses = [response2of22, response1of22]
+        scenario22.responses = [response2of22, response1of22]
         
         //MARK: - scenario 31 jared goes on murder spree
         
