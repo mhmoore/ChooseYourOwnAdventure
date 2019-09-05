@@ -60,6 +60,10 @@
 		2588109223204368006239D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5C53B1C232031CB001B9BA9 /* AppDelegate.swift */,
+				A5C53B23232031CC001B9BA9 /* Assets.xcassets */,
+				A5C53B25232031CC001B9BA9 /* LaunchScreen.storyboard */,
+				A5C53B28232031CC001B9BA9 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -67,6 +71,8 @@
 		258810932320436F006239D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A5C53B1E232031CB001B9BA9 /* ViewController.swift */,
+				A5C53B2E232048F2001B9BA9 /* SplashPageViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,13 +108,7 @@
 				258810932320436F006239D5 /* Views */,
 				2588109223204368006239D5 /* Resources */,
 				2588109123204360006239D5 /* Controllers */,
-				A5C53B1C232031CB001B9BA9 /* AppDelegate.swift */,
-				A5C53B1E232031CB001B9BA9 /* ViewController.swift */,
 				A5C53B20232031CB001B9BA9 /* Main.storyboard */,
-				A5C53B2E232048F2001B9BA9 /* SplashPageViewController.swift */,
-				A5C53B23232031CC001B9BA9 /* Assets.xcassets */,
-				A5C53B25232031CC001B9BA9 /* LaunchScreen.storyboard */,
-				A5C53B28232031CC001B9BA9 /* Info.plist */,
 			);
 			path = ChooseYourOwnAdventure;
 			sourceTree = "<group>";
@@ -336,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5H77479UZ4;
-				INFOPLIST_FILE = ChooseYourOwnAdventure/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ChooseYourOwnAdventure/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5H77479UZ4;
-				INFOPLIST_FILE = ChooseYourOwnAdventure/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ChooseYourOwnAdventure/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

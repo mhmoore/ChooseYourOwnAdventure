@@ -47,7 +47,6 @@ class Scenario{
         self.text = text
         self.responses = responsesTemp
     }
-    
 }
 
 class Response{
