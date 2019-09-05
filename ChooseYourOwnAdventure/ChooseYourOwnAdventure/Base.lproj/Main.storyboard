@@ -86,7 +86,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="wuT-dc-68Q"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -96,28 +96,28 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="gKV-kL-gUS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQZ-FQ-rIT">
                                 <rect key="frame" x="331" y="44" width="79" height="30"/>
                                 <color key="backgroundColor" red="0.40519907994923854" green="0.40122653994973623" blue="0.40122653994973623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Start Over?">
+                                <state key="normal" title="Try Again?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="startOverButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzo-so-yZQ"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="hgc" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X9l-8a-1Wa">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="jiasdlkfjsdaljflsad;jf" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X9l-8a-1Wa">
                                 <rect key="frame" x="41.5" y="95" width="331" height="500"/>
                                 <color key="backgroundColor" red="0.93606718147766499" green="0.93417067344093951" blue="0.92440886566371516" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="uE9-LH-Zm8"/>
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="io7-mp-I7v">

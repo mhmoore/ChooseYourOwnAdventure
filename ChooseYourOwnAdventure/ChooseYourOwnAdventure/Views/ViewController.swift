@@ -60,14 +60,23 @@ class ViewController: UIViewController {
     // MARK: - Custom Methods
     func grabNextScenario(selectedResponseID: Int) {
         animateBlackView()
-        guard let nextScenario = ScenarioController.shared.returnNextQuestion(with: selectedResponseID) else { return }
-        currentScenario = nextScenario
-        if let currentScenario = currentScenario {
-            updateViews(scenario: currentScenario, responseID: selectedResponseID)
+        if selectedResponseID == 99 {
+            guard let scenario = ScenarioController.shared.returnNextQuestion(with: 00) else { return }
+            updateViews(scenario: scenario, responseID: nil)
+        } else {
+            if let nextScenario = ScenarioController.shared.returnNextQuestion(with: selectedResponseID) {
+            currentScenario = nextScenario
+            if let currentScenario = currentScenario {
+                updateViews(scenario: currentScenario, responseID: selectedResponseID)
+            }
+            }
         }
     }
     
     func updateViews(scenario: Scenario, responseID: Int?) {
+//            if responseID == 99 {
+//                grabNextScenario(selectedResponseID: 00)
+//            }
             guard let responseID = responseID else { return }
             if responseID < 0 {
                 view.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
