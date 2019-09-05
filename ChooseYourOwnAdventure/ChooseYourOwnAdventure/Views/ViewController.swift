@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerTwoButton: UIButton!
     @IBOutlet weak var blackView: UIView!
     @IBOutlet weak var startOverButton: UIButton!
+    @IBOutlet weak var responseOneLabel: UILabel!
+    @IBOutlet weak var responseTwoLabel: UILabel!
     
     // MARK: - Properties
     var selectedResponseID: Int = 00 // set to the response identifier which will equate to the id key for scenario dictionary
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func startOverButtonTapped(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
         guard let scenario = ScenarioController.shared.returnNextQuestion(with: 00) else { return }
         updateViews(scenario: scenario, responseID: nil)
     }
@@ -46,25 +49,32 @@ class ViewController: UIViewController {
         animateBlackView()
         guard let currentScenario = currentScenario else { return }
         selectedResponseID = currentScenario.responses[0].identifier
-        guard let scenario = ScenarioController.shared.returnNextQuestion(with: selectedResponseID) else { return }
-        updateViews(scenario: scenario, responseID: selectedResponseID)
+        grabNextScenario(selectedResponseID: selectedResponseID)
     }
     
     @IBAction func answerTwoButtonTapped(_ sender: Any) {
         animateBlackView()
         guard let currentScenario = currentScenario else { return }
         selectedResponseID = currentScenario.responses[1].identifier
-        guard let scenario = ScenarioController.shared.returnNextQuestion(with: selectedResponseID) else { return }
-        updateViews(scenario: scenario, responseID: selectedResponseID)
+        grabNextScenario(selectedResponseID: selectedResponseID)
     }
     
     // MARK: - Custom Methods
+    func grabNextScenario(selectedResponseID: Int) {
+        animateBlackView()
+        guard let nextScenario = ScenarioController.shared.returnNextQuestion(with: selectedResponseID) else { return }
+        currentScenario = nextScenario
+        if let currentScenario = currentScenario {
+            updateViews(scenario: currentScenario, responseID: selectedResponseID)
+        }
+    }
+    
     func updateViews(scenario: Scenario, responseID: Int?) {
         if scenario.responses[0].identifier == 99 {
             navigationController?.popToRootViewController(animated: true)
-            scenarioTextView?.text = ""
-            answerOneButton.setTitle("", for: .normal)
-            answerTwoButton.setTitle("", for: .normal)
+//            scenarioTextView?.text = "You Die!!"
+//            answerOneButton.setTitle("", for: .normal)
+//            answerTwoButton.setTitle("", for: .normal)
         } else {
             guard let responseID = responseID else { return }
             if responseID < 0 {
@@ -73,18 +83,12 @@ class ViewController: UIViewController {
                 view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
             }
             scenarioTextView?.text = scenario.text
-            answerOneButton.setTitle(scenario.responses[0].text, for: .normal)
-            answerTwoButton.setTitle(scenario.responses[1].text, for: .normal)
+            responseOneLabel.text = scenario.responses[0].text
+            responseTwoLabel.text = scenario.responses[1].text
         }
     }
     
     func setUpUI() {
-        answerOneButton.layer.borderWidth = 1.0
-        answerOneButton.layer.borderColor = UIColor.gray.cgColor
-        answerTwoButton.layer.borderWidth = 1.0
-        answerTwoButton.layer.borderColor = UIColor.gray.cgColor
-        answerOneButton.titleLabel?.font = UIFont(name: "Palatino", size: 14.0)
-        answerTwoButton.titleLabel?.font = UIFont(name: "Palatino", size: 14.0)
         blackView.layer.cornerRadius = blackView.bounds.height / 2
         startOverButton.layer.cornerRadius = 10.0
         scenarioTextView.layer.borderWidth = 1.0
@@ -92,10 +96,12 @@ class ViewController: UIViewController {
     }
     
     func animateBlackView() {
-        UIView.animateKeyframes(withDuration: 2.0, delay: 0.1, options: [], animations: {
+        UIView.animateKeyframes(withDuration: 0.4, delay: 0.0, options: [.autoreverse], animations: {
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1.0, animations: {
-                self.blackView.transform = CGAffineTransform(scaleX: 50.0, y: 50.0)
+                self.blackView.transform = CGAffineTransform(scaleX: 70.0, y: 70.0)
             })
+            self.blackView.transform = .identity
+            
         }, completion: nil)
     }
 }
