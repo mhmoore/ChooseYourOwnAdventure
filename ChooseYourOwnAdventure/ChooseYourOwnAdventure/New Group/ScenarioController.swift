@@ -61,7 +61,7 @@ class ScenarioController{
         
         let scenario21 = Scenario(text: scenario21Text)
         let response1of21 = Response(identifier: 22, text: "geez chillax man ill go down the stairs")
-        let response2of21 = Response(identifier: 99, text: "nuh uh i QUIT")
+        let response2of21 = Response(identifier: 00, text: "nuh uh i QUIT")
         
         scenario21.responses = [response2of21, response1of21]
         
@@ -83,7 +83,7 @@ like mace windu, morgan freeman(hes a jedi in the extended universe...i swear), 
 but before you could say anything jared murdered peppa pig....swiped her head clean off with a really cool lightsaber.  and then teleported to a mysterious location... "theres no time to lose we can think about how we lost peppa pig... i mean losting harry potter was okay because i mean is he really that important?"  said danny in the heat of the moment then danny hops on azlan with you and you ride into the fortress of evil .....what happened to our heros......nobody knows.....or the narator ran out of time because he had to finish this project so as a result this story is only have as big as it should be
 
 """
-        let response31_1 = Response(identifier: 99, text: "send me back to the home screen please")
+        let response31_1 = Response(identifier: 00, text: "send me back to the home screen please")
         let response31_2 = Response(identifier: 00, text: "dangit! well ill go look through the story options again")
         
         let scenario31 = Scenario(text: scenario31Text)
@@ -106,7 +106,7 @@ but before you could say anything jared murdered peppa pig....swiped her head cl
         let scenarioTextneg23 = """
 wow your stupid i mean really? you took a swim in shark infested waters?? and you expect this story to continue??? im a narator not God i cant save you from your own stupidity and clearly you couldnt either....
 """
-        let responseNeg23_1 = Response(identifier: 99, text: "send me back to the home screen please")
+        let responseNeg23_1 = Response(identifier: 00, text: "send me back to the home screen please")
         let responseNeg23_2 = Response(identifier: 00, text: "Game over to start again tap me")
         
         let scenarionNeg23 = Scenario(text: scenarioTextneg23)
@@ -137,7 +137,7 @@ then finally the hooded figure spoke "pika pi.. pa pika pika pi"  "the darth lor
     well you gave into your rage and became a sith lord. and you know what the best part is?  you mad a pretty cool group of friends too! aparently the captain holds a weekly taco party at his place i mean yeah you put the force into a state of unbalance and thousands of families starve every day on multiple systems because of you...but hey your alive....right?
 """
         
-        let responseNeg32_1 = Response(identifier: 99, text: "send me back to the home screen please")
+        let responseNeg32_1 = Response(identifier: 00, text: "send me back to the home screen please")
         let responseNeg32_2 = Response(identifier: 00, text: "wait i feel guilty let me try again")
         
         let scenarioNeg32 = Scenario(text: storyTextNeg32)
@@ -151,13 +151,13 @@ then finally the hooded figure spoke "pika pi.. pa pika pika pi"  "the darth lor
         let storyTextNeg31 = "immediately force lightning danced through the air and killed you and the last thing you here was crunchatize me captain"
         
         
-        let responseNeg31_1 = Response(identifier: 99, text: "send me back to the home screen please")
+        let responseNeg31_1 = Response(identifier: 00, text: "send me back to the home screen please")
         let responseNeg31_2 = Response(identifier: 00, text: "wait i feel guilty let me try again")
         
         let scenarioNeg31 = Scenario(text: storyTextNeg31)
         scenarioNeg31.responses.append(responseNeg31_1)
         scenarioNeg31.responses.append(responseNeg31_2)
         
-        return [00:scenario00,11:scenario11,-11: scenarioNeg11, -21: scenarionNeg23, -22:scenarioNeg22, -32:scenarioNeg32, 21: scenario21,22:scenario22, 31: scenario31]
+        return [00:scenario00,11:scenario11,-11: scenarioNeg11, -21: scenarionNeg23, -22:scenarioNeg22, -32:scenarioNeg32, 21: scenario21,22:scenario22, 31: scenario31, -31: scenarioNeg31]
     }
 }
