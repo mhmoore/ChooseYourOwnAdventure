@@ -22,7 +22,12 @@ class Scenario{
     
     let text:String
     
-    let responses:[Response]
+    var responses:[Response]
+    
+    init(text:String) {
+        self.text = text
+        self.responses = []
+    }
     
     init?(storyDictionary:[String:Any]) {
         //create a temporary storage solution
