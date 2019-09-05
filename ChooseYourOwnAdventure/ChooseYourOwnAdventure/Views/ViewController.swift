@@ -74,14 +74,21 @@ class ViewController: UIViewController {
     }
     
     func updateViews(scenario: Scenario, responseID: Int?) {
-//            if responseID == 99 {
-//                grabNextScenario(selectedResponseID: 00)
-//            }
             guard let responseID = responseID else { return }
             if responseID < 0 {
-                view.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+                UIView.animate(withDuration: 2.5, delay: 0, options: [.transitionFlipFromTop, .curveEaseInOut, .allowUserInteraction, .autoreverse, .repeat], animations: {
+                    self.view.layer.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+                }, completion: nil)
+                UIView.animate(withDuration: 2.5, delay: 2.5, options: [.transitionCurlUp, .curveEaseInOut, .allowUserInteraction, .autoreverse, .repeat], animations: {
+                    self.view.layer.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+                }, completion: nil)
             } else {
-                view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
+                UIView.animate(withDuration: 2.5, delay: 0, options: [.transitionCurlDown, .curveEaseInOut, .allowUserInteraction, .autoreverse, .repeat], animations: {
+                    self.view.layer.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
+                }, completion: nil)
+                UIView.animate(withDuration: 2.5, delay: 2.5, options: [.transitionFlipFromRight, .curveEaseInOut , .allowUserInteraction, .autoreverse, .repeat], animations: {
+                    self.view.layer.backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+                }, completion: nil)
             }
             scenarioTextView?.text = scenario.text
             responseOneLabel.text = scenario.responses[0].text
@@ -92,8 +99,18 @@ class ViewController: UIViewController {
     func setUpUI() {
         blackView.layer.cornerRadius = blackView.bounds.height / 2
         startOverButton.layer.cornerRadius = 10.0
+        
         scenarioTextView.layer.borderWidth = 1.0
         scenarioTextView.layer.borderColor = UIColor.gray.cgColor
+        scenarioTextView.layer.cornerRadius = 8.0
+        
+        responseOneLabel.layer.borderWidth = 1.0
+        responseOneLabel.layer.borderColor = UIColor.gray.cgColor
+        responseOneLabel.layer.cornerRadius = 8.0
+        
+        responseTwoLabel.layer.borderWidth = 1.0
+        responseTwoLabel.layer.borderColor = UIColor.gray.cgColor
+        responseTwoLabel.layer.cornerRadius = 8.0
     }
     
     func animateBlackView() {
