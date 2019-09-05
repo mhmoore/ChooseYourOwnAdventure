@@ -38,8 +38,8 @@ class ScenarioController{
         """
         let scenario00 = Scenario(text: scenario00Text)
         //scenario 00 Responses
-        let response1of00 = Response(identifier: -11, text: "enter the house")
-        let response2of00 = Response(identifier: 11, text: "turn around surely there is a better story elsewhere")
+        let response1of00 = Response(identifier: 11, text: "enter the house")
+        let response2of00 = Response(identifier: -11, text: "turn around surely there is a better story elsewhere")
         scenario00.responses.append(response1of00)
         scenario00.responses.append(response2of00)
         
@@ -93,7 +93,7 @@ but before you could say anything jared murdered peppa pig....swiped her head cl
         """
         
         let response1ofneg11 = Response(identifier: -22, text: "Hello there")
-        let response2ofneg11 = Response(identifier: -21, text: "hey look a aggresive shark with laser beams and a hunger fo rhuman flesh ill go swim maybe hes friendly")
+        let response2ofneg11 = Response(identifier: -21, text: "hey look a aggresive shark with laser beams and a hunger for human flesh ill go swim maybe hes friendly")
         let scenarioNeg11 = Scenario(text:scenarioNeg11Text)
         scenarioNeg11.responses.append(response1ofneg11)
         scenarioNeg11.responses.append(response2ofneg11)
