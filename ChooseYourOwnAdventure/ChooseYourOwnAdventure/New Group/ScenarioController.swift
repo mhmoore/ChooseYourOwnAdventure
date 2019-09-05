@@ -51,7 +51,9 @@ class ScenarioController{
         let response1of11 = Response(identifier: 22, text: "i mean whats the likelihood of a tiger being in a house? i should ckeck it out")
         let response2of11 = Response(identifier: 21, text: "are you kidding i aint brave im going to stay on this floor")
         
-        scenario11.responses = [response1of11, response2of11]
+        scenario11.responses.append(response1of11)
+            scenario11.responses.append(response2of11)
+        
         
         //MARK: - scenario 21 stay on this floor
         
@@ -61,7 +63,7 @@ class ScenarioController{
         let response1of21 = Response(identifier: 22, text: "geez chillax man ill go down the stairs")
         let response2of21 = Response(identifier: 99, text: "nuh uh i QUIT")
         
-        scenario11.responses = [response2of21, response1of21]
+        scenario21.responses = [response2of21, response1of21]
         
         //MARK: - Senario 22 descend the stairs
         
