@@ -34,30 +34,30 @@ class ScenarioController{
     func createScenarios() -> [Int:Scenario]{
         //MARK: - Scenario00
         let scenario00Text = """
-        as the moonlight sat shown through the trees and the slow draft of wind carries through the night you feel a sense of bewilderment around you.  Its Late....maybe to late but an exact hour is not made known to you.  trees surround you on all sides and directly in front of you stands a house.  the house isnt nesecarily unkempt or nesecarily eerie but it does stand empty...what will you do?
+        as the moonlight cast itself through the trees, and the slow draft of wind carries through the night, you feel a sense of bewilderment around you.  Its Late....then again who knows what late really is? your sense of time seems to fail you. Trees surround you on all sides and directly in front of you stands an older home.  The house isnt nesecarily unkempt or nesecarily eerie but it does stand empty. but it feels as if its full of adventure..what will you do?
         """
         let scenario00 = Scenario(text: scenario00Text)
         //scenario 00 Responses
-        let response1of00 = Response(identifier: 11, text: "enter the house")
+        let response1of00 = Response(identifier: 11, text: "Enter the house i mean obviously the narrator is pushing me in that direction.")
         let response2of00 = Response(identifier: -11, text: "turn around surely there is a better story elsewhere")
         scenario00.responses.append(response1of00)
         scenario00.responses.append(response2of00)
         
         //MARK: - scenario 11 player chooses to enter home
         let scenario11Text = """
-        you approach the home and open the front door.  as you step into the door you can hear the sound of....well that cant be right.  it sounds as if a large tiger was prancing around downstairs in the basement.  in front of you exists a staircase down the stairs.
+        You approach the home and open the front door. reaching forward and grasping the door knob you push forward as a cool breeze leaves the home. As you step into the door you can hear a mysterious sound.  paper crumbling? no.  thats far to light of a noise.  this noise was deeper like the sound of....well that cant be right.  It sounds as if almost one would imagine a large tiger  prancing around downstairs in the basement on a pile of cereal.  in front of you exists a staircase down the dark staircase.
         """
         let scenario11 = Scenario(text: scenario11Text)
         let response1of11 = Response(identifier: 22, text: "i mean whats the likelihood of a tiger being in a house? i should ckeck it out")
-        let response2of11 = Response(identifier: 21, text: "are you kidding i aint brave im going to stay on this floor")
+        let response2of11 = Response(identifier: 21, text: "are you kidding im not brave im going to stay on this floor")
         
         scenario11.responses.append(response1of11)
-            scenario11.responses.append(response2of11)
+        scenario11.responses.append(response2of11)
         
         
         //MARK: - scenario 21 stay on this floor
         
-        let scenario21Text = "OH MY GOODNESS STOP BEING A PANSY BY TRYING TO DERAIL THE STORY IM THE NARRATOR AND I DECIDE WHAT HAPPENS NOW GO DOWN THE STAIRS"
+        let scenario21Text = "OH MY GOODNESS STOP BEING A PANSY BY TRYING TO DERAIL THE STORY IM THE NARRATOR AND I DECIDE WHAT HAPPENS NOW GO DOWN THE STAIRS.  YOU HIT THE LETS GO ON AN ADVENTURE BUTTON AND NOW HERE YOU ARE AVOIDING IT"
         
         let scenario21 = Scenario(text: scenario21Text)
         let response1of21 = Response(identifier: 22, text: "geez chillax man ill go down the stairs")
@@ -68,19 +68,45 @@ class ScenarioController{
         //MARK: - Senario 22 descend the stairs
         
         let scenario22Text = """
-you go down the stairs terror fills your heart and ...wait a second....the ground is covered in frosted flakes and look!! its tony the tiger! isnt he just great?? "quick theres no time to explain" said tony "we must go find azlan!!"  tony then drags you into a magical wardrobe (hey there can be more than one magical wardrobe in the universe) and when you walk out you find yourself on the planet of tatooine .....wow its hot but thankfully tony has a delicicious bowl of frosted flakes which you munch on enthusiastically (see arnt you glad you trusted me the narrator??)  over the hill a figure rises surrounding him are the remains of hundreds of sand people who no longer can walk single file....because they dont have legs.....anymore.....they also happen to be very dead... anyways its azlan!!! you and tony then hop on his back and using the power of narnia azlan activates his hyperdrive and you all blast off to nabuu...\n tony then goes on to explain a few things about you being the chosen one and how your going to go invade the sith super secret headquarters of evil on nabuu but it kinda goes in one ear and out the other because lets face it...your riding a magic lion....with a cartoon cereal mascot.....in space ... \n but you land in the middle of a fight and who do you see? none other than the coolest people ever and 2 dead people
-like mace windu, morgan freeman(hes a jedi in the extended universe...i swear), a guy named jared who seems kinda fishey but hey who are you to judge, a jedi who looks really similar to peppa pig  and the most powerful jedi to ever exist Jedi Master Danny Devito \n  what youve never heard of him? well allow me to tell you ....\n \n  Legend tells of a legendary Jedi whose Jedi skills were the stuff of legend. He traveled the land in search of worthy foes.  He was so deadly in fact that his enemies would go blind from overexposure to pure awesomeness.Never before had a panda been so feared... and so loved.
+you go down the stairs terror fills your heart and ...wait a second....the ground is covered in frosted flakes and look!! its tony the tiger! isnt he just great?? "quick theres no time to explain" said tony "we must go find azlan!!"  tony then drags you into a magical wardrobe (hey there can be more than one magical wardrobe in the universe) and when you walk out you find yourself on the planet of tatooine .....wow its hot but thankfully tony has a delicicious bowl of frosted flakes which you munch on enthusiastically (see arnt you glad you trusted me the narrator??) suddenly shots are fired towards your direction.  a bullet pierces your cereal bowl and milky goodness soaks in to the course sand.... Sand people on the horizon.  "quick now is the time for action" cried Tony.  he tosses you a blaster
 """
         let scenario22 = Scenario(text: scenario22Text)
-        let response1of22 = Response(identifier: 31, text: "nice")
-        let response2of22 = Response(identifier: 31, text: "thats cool but that jared guy seems sketchy")
+        let scenario22Response1 = Response(identifier: 23, text: "fight them and stand your ground")
+        let scenario22Response2 = Response(identifier: 24, text: "RUN FOR THE HILLS")
+        scenario22.responses.append(scenario22Response1)
+        scenario22.responses.append(scenario22Response2)
+        let scenario23Text =      """
+you fire your blaster and you and Tony hold your ground.  but the same people are to strong and the're closing in.  but then as you and Tony take cover.....Silence and then a Roar.
+ over the hill a figure rises surrounding him are the remains of hundreds of sand people who no longer can walk single file....because they dont have legs.....anymore.....they also happen to be very dead... anyways its azlan!!! you and tony then hop on his back and using the power of narnia azlan activates his hyperdrive and you all blast off to nabuu...\n tony then goes on to explain a few things about you being the chosen one and how your going to go invade the sith super secret headquarters of evil on nabuu but it kinda goes in one ear and out the other because lets face it...your riding a magic lion....with a cartoon cereal mascot.....in space ... \n but you land in the middle of a fight and who do you see? none other than the coolest people ever and 2 dead people
+like mace windu, morgan freeman(hes a jedi in the extended universe...i swear), a guy named jared who seems kinda fishey but hey who are you to judge, a jedi who looks really similar to peppa pig  and the most powerful jedi to ever exist Jedi Master Danny Devito \n  what youve never heard of him? well allow me to tell you ....\n \n  Legend tells of a legendary Jedi whose Jedi skills were the stuff of legend. He traveled the land in search of worthy foes.  He was so deadly in fact that his enemies would go blind from overexposure to pure awesomeness.Never before had a panda been so feared... and so loved.
+"""
+        let scenario23 = Scenario(text: scenario23Text)
+        let response1of23 = Response(identifier: 31, text: "nice")
+        let response2of23 = Response(identifier: 31, text: "thats cool but that jared guy seems sketchy")
         
-        scenario22.responses = [response2of22, response1of22]
+        scenario23.responses = [response2of23, response1of23]
+        
+        //MARK: - RUN FOR THE HILLS SCENARIO 24
+        
+        
+        let scenario24Text = """
+you run and as you look back you witness the last few moments of Tonys life... but it doesnt affect you because your obviously heartless.  after a few hours of wandering through the desert you come across a cave. Tired from the heat of the day you settle in the cave and see a dark figure in a hood standing in front of you.  wordless he strikes you in the head
+you awaken days later unsure of where you are anymore the walls are metallic almost space like and your rooms only feature is a singular door... \n spider man opens the door except this is no ordenary spider man...its spidermanus an evil sith lord!  he takes you and drags you out you sputter you cry begging for information....yet he says nothing.  he brings you to a large semicircular room.  multiple sith surround the table as well as several other evil people of evil proportions.  basically think of the worst person ever times it by 2 and then copy that evilness several times over and bam you have an inkling on how evil this room was... think like EA lootbox levels of evil here \n  bobba fet sat on the far right next to jabbu the hut.  in the center is a hooded figure and next to him the Captain of crunch himself with an two empty seats on his left side spider man took one of these and before you can mutter another word the door burst....and then in walked in a most peculiar man his name was JARED and while he may outwardly seem as a good guy he had just returned from his mission where he was a double agent *GASP* in his hand he held a canvas bag with something roughly the size of a bowling ball was inside "heres the head" said jared as he tossed the bag towards the center of the room "the head of Jedi knight Peppepis pig" he sat down in the final empty chair "where is Kylo" demanded the Captain " he died" replied jared "finishing off that poor excuse for a franchise Jedi youngling Harry Potter"\n now this is me the 4th wall breaking narator talking at this point...your probably wondering "is that the real Harry potter?" and the answer is yes..yes it is because Harry potter is lame but back to the story\n.  "well sucks to suck" said the Captain \n""
+then finally the hooded figure spoke "pika pi.. pa pika pika pi"  "the darth lord would like to know if you would like to join the dark side"
+
+
+"""
+        
+        let scenario24Response1 = Response(identifier: -32, text: "join the dark side")
+        let scenario24Response2 = Response(identifier: -31, text: "OVER MY DEAD BODY")
+        let scenario24 = Scenario(text: scenario24Text)
+        scenario24.responses.append(scenario24Response1)
+        scenario24.responses.append(scenario24Response2)
         
         //MARK: - scenario 31 jared goes on murder spree
         
         let scenario31Text = """
-but before you could say anything jared murdered peppa pig....swiped her head clean off with a really cool lightsaber.  and then teleported to a mysterious location... "theres no time to lose we can think about how we lost peppa pig... i mean losting harry potter was okay because i mean is he really that important?"  said danny in the heat of the moment then danny hops on azlan with you and you ride into the fortress of evil .....what happened to our heros......nobody knows.....or the narator ran out of time because he had to finish this project so as a result this story is only have as big as it should be
+but before you could say anything jared murdered peppa pig....swiped her head clean off with a really cool lightsaber.  and then teleported to a mysterious location... "theres no time to lose we can think about how we lost peppa pig... i mean losting harry potter was okay because i mean is he really that important?"  said danny in the heat of the moment then danny hops on azlan with you and you ride into the fortress of evil.  faster than a speeding bullet our heros dash forward
 
 """
         let response31_1 = Response(identifier: 00, text: "send me back to the home screen please")
@@ -158,6 +184,6 @@ then finally the hooded figure spoke "pika pi.. pa pika pika pi"  "the darth lor
         scenarioNeg31.responses.append(responseNeg31_1)
         scenarioNeg31.responses.append(responseNeg31_2)
         
-        return [00:scenario00,11:scenario11,-11: scenarioNeg11, -21: scenarionNeg23, -22:scenarioNeg22, -32:scenarioNeg32, 21: scenario21,22:scenario22, 31: scenario31, -31: scenarioNeg31]
+        return [00:scenario00,11:scenario11,-11: scenarioNeg11, -21: scenarionNeg23, -22:scenarioNeg22, -32:scenarioNeg32, 21: scenario21,22:scenario22, 31: scenario31, -31: scenarioNeg31, 23: scenario23, 24: scenario24]
     }
 }
