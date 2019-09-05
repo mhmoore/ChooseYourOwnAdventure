@@ -17,17 +17,17 @@ class SplashPageViewController: UIViewController {
     }
     
     func setUpUI() {
-        playButton.layer.cornerRadius = playButton.bounds.height / 2
+        playButton.layer.cornerRadius = playButton.bounds.height / 4
         playButton.layer.borderColor = UIColor.lightGray.cgColor
-        playButton.layer.borderWidth = 5.0
+        playButton.layer.borderWidth = 3.0
         playButton.layer.shadowRadius = 32.0
         playButton.layer.shadowColor = UIColor.black.cgColor
         playButton.layer.shadowOpacity = 1.0
         
-        UIView.animate(withDuration: 2.0, delay: 0, options: [.transitionFlipFromTop, .allowUserInteraction, .autoreverse, .repeat], animations: {
+        UIView.animate(withDuration: 2.5, delay: 0, options: [.transitionFlipFromTop, .allowUserInteraction, .autoreverse, .repeat], animations: {
             self.view.layer.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
         }, completion: nil)
-        UIView.animate(withDuration: 2.0, delay: 2.0, options: [.transitionFlipFromBottom, .allowUserInteraction, .autoreverse, .repeat], animations: {
+        UIView.animate(withDuration: 2.5, delay: 2.5, options: [.transitionFlipFromBottom, .allowUserInteraction, .autoreverse, .repeat], animations: {
             self.view.layer.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         }, completion: nil)
     }

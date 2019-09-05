@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxj-gX-zL8">
-                                <rect key="frame" x="157" y="657" width="100" height="75"/>
+                                <rect key="frame" x="107" y="657" width="200" height="75"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Eb7-Si-UwT"/>
+                                    <constraint firstAttribute="width" constant="200" id="Eb7-Si-UwT"/>
                                     <constraint firstAttribute="height" constant="75" id="RKF-pU-4n4"/>
                                 </constraints>
-                                <state key="normal" title="Play">
+                                <state key="normal" title="Let's Go On An Adventure!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>

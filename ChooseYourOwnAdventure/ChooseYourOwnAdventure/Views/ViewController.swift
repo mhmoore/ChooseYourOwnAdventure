@@ -40,9 +40,7 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func startOverButtonTapped(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
-        guard let scenario = ScenarioController.shared.returnNextQuestion(with: 00) else { return }
-        updateViews(scenario: scenario, responseID: nil)
+        grabNextScenario(selectedResponseID: 00)
     }
     
     @IBAction func answerOneButtonTapped(_ sender: Any) {
@@ -70,12 +68,6 @@ class ViewController: UIViewController {
     }
     
     func updateViews(scenario: Scenario, responseID: Int?) {
-        if scenario.responses[0].identifier == 99 {
-            navigationController?.popToRootViewController(animated: true)
-//            scenarioTextView?.text = "You Die!!"
-//            answerOneButton.setTitle("", for: .normal)
-//            answerTwoButton.setTitle("", for: .normal)
-        } else {
             guard let responseID = responseID else { return }
             if responseID < 0 {
                 view.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
@@ -85,7 +77,7 @@ class ViewController: UIViewController {
             scenarioTextView?.text = scenario.text
             responseOneLabel.text = scenario.responses[0].text
             responseTwoLabel.text = scenario.responses[1].text
-        }
+        
     }
     
     func setUpUI() {
