@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     // MARK: - Properties
     var selectedResponseID: Int = 00 // set to the response identifier which will equate to the id key for scenario dictionary
     var currentScenario: Scenario = {
-        guard let scenario = ScenarioController.shared.returnNextQuestion(with: 00) else { return }
+        guard let scenario = ScenarioController.shared.returnNextQuestion(with: 00) else { return Scenario(text: "") }
         return scenario
     }()
     
